@@ -10,7 +10,6 @@ test("renderiza produtos e chama onAdd ao clicar em Adicionar", async () => {
     { id: 3, name: "Headset", price: 299.0, stock: 6 },
   ];
 
-  // Simula o fetch do backend
   global.fetch = jest.fn(() =>
     Promise.resolve({
       json: () => Promise.resolve(mockProducts),

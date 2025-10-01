@@ -22,7 +22,6 @@ test("aplica cupom via prop applyCoupon e exibe novos valores", async () => {
 
   expect(applyCoupon).toHaveBeenCalledWith("FIXED50");
 
-  // Verifica se os valores atualizados
   expect(await screen.findByText("Desconto: R$50.00")).toBeInTheDocument();
   expect(screen.getByText("Total com desconto: R$150.00")).toBeInTheDocument();
 });
